@@ -1,0 +1,128 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--container-padding);
+  height: var(--navbar-height);
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.nav-logo img {
+  height: 52px;
+  width: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.nav-link {
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color 150ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--color-text-primary);
+}
+
+.nav-link[aria-current='page'] {
+  color: var(--color-text-primary);
+}
+
+.nav-link-cta {
+  color: var(--color-accent-soft);
+  border: 0.5px solid var(--color-accent);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-sm);
+  letter-spacing: var(--tracking-wide);
+}
+
+.nav-link-cta:hover,
+.nav-link-cta:focus-visible {
+  background-color: var(--color-accent);
+  color: var(--color-btn-primary-text);
+}
+
+.nav-toggle {
+  display: block;
+  cursor: pointer;
+  width: 2.5em;
+  height: 2.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-accent);
+  border-radius: 4px;
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease;
+}
+
+.bar-top,
+.bar-bottom {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    padding: var(--space-4) var(--container-padding);
+    background-color: var(--color-bg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0s 0.3s;
+  }
+
+  .nav-list.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0s;
+  }
+
+  .nav-toggle[aria-expanded='true'] .bar-top {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded='true'] .bar-middle {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded='true'] .bar-bottom {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

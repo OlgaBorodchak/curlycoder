@@ -67,6 +67,10 @@ button {
   padding-inline: var(--container-padding);
 }
 
+.no-transition * {
+  transition: none !important;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

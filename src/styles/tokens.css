@@ -50,7 +50,7 @@
 
   --section-padding: clamp(4rem, 8vw, 7rem);
   --container-padding: clamp(1.5rem, 5vw, 3rem);
-  --navbar-height: 4em;
+  --navbar-height: 5.313em;
   --border-radius-sm: 2px;
   --border-radius-md: 4px;
 }
