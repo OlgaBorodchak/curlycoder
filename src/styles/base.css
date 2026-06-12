@@ -64,7 +64,7 @@ button {
 .container {
   width: min(1440px, 100%);
   margin-inline: auto;
-  padding-inline: var(--container-padding);
+  padding: var(--container-padding);
 }
 
 .no-transition * {
