@@ -1,2 +1,1 @@
-import './styles/tokens.css'
-import './styles/reset.css'
+import '../src/main.css'
