@@ -1,0 +1,10 @@
+@import './tokens.css';
+@import './reset.css';
+
+@import './navbar.css';
+@import './banner.css';
+@import './about.css';
+@import './skills.css';
+@import './work.css';
+@import './contact.css';
+@import './footer.css';
