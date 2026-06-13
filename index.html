@@ -142,6 +142,60 @@
         </div>  
       </div>
     </section>
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-eyebrow">
+            <span class="section-eyebrow-dot" aria-hidden="true"></span>
+            <span class="section-eyebrow-text">Contact</span>
+          </div>
+          <h2 class="section-heading contact-heading">
+            Let's <span class="accent-text">work together</span>
+          </h2>
+          <p class="contact-lead">
+            Have a project in mind, or just want to say hi? I'd love to hear from
+            you — I usually respond within a day or two.
+          </p>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <span class="contact-info-label">Email</span>
+              <a class="accent-text" href="mailto:olga@curlycoder.ca">olga@curlycoder.ca</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-label">Location</span>
+              <span>Toronto, Canada</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-label">Availability</span>
+              <span>Open to freelance &amp; full-time</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" action="#" method="POST" novalidate="">
+          <div class="contact-field">
+            <label class="contact-label" for="name">Name</label>
+            <input class="contact-input custom" type="text" id="name" name="name" autocomplete="name" required="" aria-describedby="name-error" aria-invalid="true">
+            <span class="contact-error" id="name-error" role="alert">Please enter your name.</span>
+          </div>
+          <div class="contact-field">
+            <label class="contact-label" for="email">Email</label>
+            <input class="contact-input custom" type="email" id="email" name="email" autocomplete="email" required="" aria-describedby="email-error" aria-invalid="true">
+            <span class="contact-error" id="email-error" role="alert">Please enter your email.</span>
+          </div>
+          <div class="contact-field">
+            <label class="contact-label" for="message">Message</label>
+            <textarea class="contact-textarea custom" id="message" name="message" rows="5" required="" aria-describedby="message-error" aria-invalid="true"></textarea>
+            <span class="contact-error" id="message-error" role="alert">Please enter a message.</span>
+          </div>
+          <div class="contact-honeypot" aria-hidden="true">
+            <label for="_gotcha">Leave this field empty</label>
+            <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="contact-submit" type="submit">Send message</button>
+          <div class="contact-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer></footer>
