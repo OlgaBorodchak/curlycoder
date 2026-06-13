@@ -33,7 +33,6 @@
 }
 
 .banner-headline {
-  font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-weight: 800;
   letter-spacing: var(--tracking-tight);
