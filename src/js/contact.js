@@ -58,13 +58,17 @@ export function initContactForm() {
       }
     });
 
+    const status = document.getElementById('form-status');
+
     if (isValid) {
-      const status = document.getElementById('form-status');
-      status.textContent = 'Message sent successfully!';
-      status.style.display = 'block';
+      status.textContent = 'Thanks! Your message has been sent — I will get back to you soon.';
+      status.className = 'contact-status contact-status-success is-visible';
 
       form.reset();
       fields.forEach(hideError);
+    } else {
+      status.textContent = 'Please fix the errors above and try again.';
+      status.className = 'contact-status contact-status-error is-visible';
     }
   });
 }
