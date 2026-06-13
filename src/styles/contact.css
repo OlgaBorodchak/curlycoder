@@ -143,3 +143,19 @@
   border: 0.5px solid transparent;
   display: none;
 }
+
+.contact-status.is-visible {
+  display: block;
+}
+ 
+.contact-status-success {
+  color: #97C459;
+  border-color: #639922;
+  background-color: rgba(151, 196, 89, 0.08);
+}
+ 
+.contact-status-error {
+  color: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  background-color: rgba(232, 23, 93, 0.08);
+}
