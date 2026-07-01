@@ -30,10 +30,6 @@
   object-fit: cover;
 }
 
-.about-heading {
-  margin-bottom: var(--space-5);
-}
-
 .about-text {
   font-size: var(--text-base);
   font-weight: 300;

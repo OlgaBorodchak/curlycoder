@@ -2,10 +2,6 @@
   padding-block: var(--section-padding);
 }
 
-.skills-header {
-  margin-bottom: var(--space-12);
-}
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
