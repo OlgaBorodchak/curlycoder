@@ -1,11 +1,11 @@
-@import './styles/tokens.css';
-@import './styles/base.css';
-@import './styles/reset.css';
+@import './tokens.css';
+@import './base.css';
+@import './reset.css';
 
-@import './styles/navbar.css';
-@import './styles/banner.css';
-@import './styles/about.css';
-@import './styles/skills.css';
-@import './styles/work.css';
-@import './styles/contact.css';
-@import './styles/footer.css';
+@import './navbar.css';
+@import './banner.css';
+@import './about.css';
+@import './skills.css';
+@import './work.css';
+@import './contact.css';
+@import './footer.css';
