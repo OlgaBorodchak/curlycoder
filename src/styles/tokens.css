@@ -48,7 +48,7 @@
   --space-11: 5rem;     /* 80 */
   --space-12: 6rem;     /* 96 */
 
-  --section-padding: clamp(4rem, 8vw, 7rem);
+  --section-padding: clamp(2rem, 8vw, 3.5rem);
   --container-padding: clamp(1.5rem, 5vw, 3rem);
   --navbar-height: 5.313em;
   --border-radius-sm: 2px;
