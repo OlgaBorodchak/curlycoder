@@ -11,6 +11,8 @@
 
 .about-photo-wrap {
   position: relative;
+  
+  margin-inline: auto;
 }
 
 .about-photo-wrap::before {
@@ -65,4 +67,15 @@
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-top: var(--space-1);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    width: 80%;
+    margin-inline: auto;
+  }
 }

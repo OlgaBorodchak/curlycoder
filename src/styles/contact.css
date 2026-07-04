@@ -73,7 +73,7 @@
   color: var(--color-text-primary);
 }
 
-.custom {
+.caret-color {
   caret-color: var(--color-accent);
 }
 
