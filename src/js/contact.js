@@ -42,7 +42,7 @@ export function initContactForm() {
     });
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     let isValid = true;
@@ -59,16 +59,38 @@ export function initContactForm() {
     });
 
     const status = document.getElementById('form-status');
+    const submitButton = form.querySelector('.contact-submit');
 
-    if (isValid) {
-      status.textContent = 'Thanks! Your message has been sent — I will get back to you soon.';
-      status.className = 'contact-status contact-status-success is-visible';
-
-      form.reset();
-      fields.forEach(hideError);
-    } else {
+    if (!isValid) {
       status.textContent = 'Please fix the errors above and try again.';
       status.className = 'contact-status contact-status-error is-visible';
+      return;
+    }
+
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        status.textContent = 'Thanks! Your message has been sent — I will get back to you soon.';
+        status.className = 'contact-status contact-status-success is-visible';
+
+        form.reset();
+        fields.forEach(hideError);
+      } else {
+        status.textContent = 'Something went wrong. Please try again or email me directly.';
+        status.className = 'contact-status contact-status-error is-visible';
+      }
+    } catch {
+      status.textContent = 'Something went wrong. Please try again or email me directly.';
+      status.className = 'contact-status contact-status-error is-visible';
+    } finally {
+      submitButton.disabled = false;
     }
   });
 }
