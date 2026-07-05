@@ -45,3 +45,9 @@
   color: var(--color-accent-soft);
   border-color: var(--color-accent);
 }
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
