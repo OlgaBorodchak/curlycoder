@@ -73,7 +73,7 @@
   color: var(--color-text-primary);
 }
 
-.caret-color {
+.contact-input-caret {
   caret-color: var(--color-accent);
 }
 
@@ -147,15 +147,22 @@
 .contact-status.is-visible {
   display: block;
 }
- 
+
 .contact-status-success {
-  color: #97C459;
+  color: #97c459;
   border-color: #639922;
   background-color: rgba(151, 196, 89, 0.08);
 }
- 
+
 .contact-status-error {
   color: var(--color-accent-soft);
   border-color: var(--color-accent);
   background-color: rgba(232, 23, 93, 0.08);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
 }
