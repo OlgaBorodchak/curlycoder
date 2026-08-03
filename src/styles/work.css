@@ -85,6 +85,13 @@
   background: rgba(232, 23, 93, 0.08);
 }
 
+.project-tag-progress {
+  color: var(--color-text-primary);
+  border-color: rgba(232, 23, 93, 0.3);
+  background: rgba(232, 23, 93, 0.08);
+  font-style: italic;
+}
+
 .project-links {
   display: flex;
   gap: var(--space-4);
