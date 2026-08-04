@@ -72,6 +72,16 @@
   margin-top: var(--space-1);
 }
 
+.about-stat-link {
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.about-stat-link:hover,
+.about-stat-link:focus-visible {
+  color: var(--color-accent-soft);
+}
+
 @media (max-width: 768px) {
   .about-layout {
     grid-template-columns: 1fr;
