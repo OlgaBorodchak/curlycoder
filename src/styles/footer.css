@@ -11,8 +11,33 @@
 }
 
 .footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: var(--text-sm);
   color: var(--color-text-muted);
+}
+
+.vertical-slider {
+  display: flex;
+  gap: var(--space-2);
+}
+ 
+.vertical-slider-track {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+}
+ 
+.vertical-slider-track .svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  color: var(--color-accent);
 }
 
 .footer-socials {

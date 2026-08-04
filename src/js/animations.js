@@ -1,0 +1,28 @@
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+export function footerAnimation() {
+  const icons = document.querySelectorAll('.vertical-slider-track .svg')
+  if (!icons.length) return
+
+  let current = 0
+
+  gsap.set(icons, { autoAlpha: 0, y: 18 })
+  gsap.set(icons[0], { autoAlpha: 1, y: 0 })
+
+  setInterval(() => {
+    const next = (current + 1) % icons.length
+
+    gsap.to(icons[current], { y: -18, autoAlpha: 0, duration: 0.8 })
+
+    gsap.fromTo(
+      icons[next],
+      { y: 18, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 0.8 },
+    )
+
+    current = next
+  }, 1300)
+}
