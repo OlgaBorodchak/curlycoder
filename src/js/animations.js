@@ -26,3 +26,35 @@ export function footerAnimation() {
     current = next
   }, 1300)
 }
+
+export function bannerGlowAnimation() {
+  const banner = document.querySelector('.banner')
+  const glows = document.querySelectorAll('.banner-glow')
+  if (!banner || !glows.length) return
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
+  if (prefersReducedMotion) return
+
+  glows.forEach((glow) => moveRandomly(glow, banner))
+}
+
+function moveRandomly(el, container) {
+  const bounds = container.getBoundingClientRect()
+  const elRect = el.getBoundingClientRect()
+
+  const maxX = bounds.width - elRect.width
+  const maxY = bounds.height - elRect.height
+
+  const x = gsap.utils.random(0, Math.max(maxX, 0))
+  const y = gsap.utils.random(0, Math.max(maxY, 0))
+
+  gsap.to(el, {
+    left: x,
+    top: y,
+    duration: gsap.utils.random(6, 10),
+    ease: 'sine.inOut',
+    onComplete: () => moveRandomly(el, container),
+  })
+}
