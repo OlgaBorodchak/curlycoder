@@ -1,5 +1,6 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import SplitType from 'split-type'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -56,5 +57,32 @@ function moveRandomly(el, container) {
     duration: gsap.utils.random(6, 10),
     ease: 'sine.inOut',
     onComplete: () => moveRandomly(el, container),
+  })
+}
+
+export function headlineRevealAnimation() {
+  const headline = document.querySelector('.banner-headline')
+
+  if (!headline) return
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
+
+  if (prefersReducedMotion) return
+
+  const visualHeadline = headline.querySelector('[aria-hidden="true"]')
+
+  const split = new SplitType(visualHeadline, {
+    types: 'chars',
+  })
+
+  gsap.from(split.chars, {
+    autoAlpha: 0,
+    y: 20,
+    duration: 0.7,
+    stagger: 0.02,
+    ease: 'power2.out',
+    delay: 0.2,
   })
 }
