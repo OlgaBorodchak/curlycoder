@@ -111,3 +111,29 @@ export function headingsRevealAnimation() {
     })
   })
 }
+
+export function workRevealAnimation() {
+  const rows = document.querySelectorAll('.project-row')
+
+  if (!rows.length) return
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
+  if (prefersReducedMotion) return
+
+  gsap.set(rows, { autoAlpha: 0, y: 60 })
+
+  gsap.to(rows, {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.5,
+    stagger: 0.12,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.project-list',
+      start: 'top 80%',
+      toggleActions: 'play none reverse none',
+    },
+  })
+}
