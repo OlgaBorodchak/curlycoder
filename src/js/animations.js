@@ -86,3 +86,28 @@ export function headlineRevealAnimation() {
     delay: 0.2,
   })
 }
+
+export function headingsRevealAnimation() {
+  ScrollTrigger.config({ ignoreMobileResize: true })
+
+  const headings = gsap.utils.toArray('.fade-in-left')
+  if (!headings.length) return
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
+  if (prefersReducedMotion) return
+
+  headings.forEach((heading) => {
+    gsap.from(heading, {
+      xPercent: -8,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: heading,
+        start: 'clamp(top 85%)',
+        end: 'clamp(bottom 100%)',
+        toggleActions: 'play none reverse none',
+      },
+    })
+  })
+}
