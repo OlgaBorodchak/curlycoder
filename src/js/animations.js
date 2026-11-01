@@ -74,7 +74,7 @@ export function headlineRevealAnimation() {
   const visualHeadline = headline.querySelector('[aria-hidden="true"]')
 
   const split = new SplitType(visualHeadline, {
-    types: 'chars',
+    types: 'words, chars',
   })
 
   gsap.from(split.chars, {
