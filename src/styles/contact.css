@@ -166,3 +166,9 @@
     gap: var(--space-8);
   }
 }
+
+@media (max-width: 425px) {
+  .contact-submit {
+    width: 100%;
+  }
+}
