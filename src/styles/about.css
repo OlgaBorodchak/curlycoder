@@ -94,7 +94,7 @@
   }
 
   .about-stats {
-    justify-content: space-around;
+    justify-content: space-between;
     gap: var(--space-4);
   }
 }
