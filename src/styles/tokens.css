@@ -24,7 +24,7 @@
   --text-base: clamp(0.875rem, 1.5vw, 1rem); /* 14–16px  body */
   --text-lg: clamp(1rem, 2vw, 1.25rem); /* 16–20px  subheadings */
   --text-xl: clamp(1.5rem, 3vw, 2rem); /* 24–32px  section titles */
-  --text-2xl: clamp(2rem, 4.5vw, 3.2rem); /* 32–52px  hero headline */
+  --text-2xl: clamp(1.8rem, 6vw, 4rem); /* 32–52px  hero headline */
 
   --tracking-tight: -0.02em;
   --tracking-normal: 0.01em;
