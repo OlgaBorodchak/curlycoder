@@ -50,6 +50,8 @@
 
 .about-stats {
   display: flex;
+  justify-content: space-between;
+  text-align: center;
   gap: var(--space-8);
   margin-top: var(--space-8);
   padding-top: var(--space-6);
@@ -91,10 +93,5 @@
   .about-photo-wrap {
     max-width: 340px;
     width: 100%;
-  }
-
-  .about-stats {
-    justify-content: space-between;
-    gap: var(--space-4);
   }
 }
