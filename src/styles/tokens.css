@@ -4,7 +4,7 @@
 
   --color-text-primary: #f0ede8; /* headlines, strong copy  — 10.5:1 on bg */
   --color-text-muted: #a8a7a7; /* body, captions           — 4.6:1 on bg */
-  --color-text-disabled: #9E9E9E; /* decorative only, aria-hidden required */
+  --color-text-disabled: #c9c5bf; /* decorative only, aria-hidden required */
 
   --color-accent: #e8175d; /* buttons, highlights, dividers */
   --color-accent-soft: #d4607f; /* eyebrow, tags — lightened for a11y (4.5:1) */
