@@ -6,6 +6,7 @@ import { footerAnimation } from './animations.js'
 import { bannerGlowAnimation } from './animations.js'
 import { headlineRevealAnimation } from './animations.js'
 import { headingsRevealAnimation } from './animations.js'
+import { initChat } from './chat.js'
 
 initNavbar()
 initContactForm()
@@ -13,3 +14,4 @@ footerAnimation()
 bannerGlowAnimation()
 headlineRevealAnimation()
 headingsRevealAnimation()
+initChat()
