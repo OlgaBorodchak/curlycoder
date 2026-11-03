@@ -18,8 +18,8 @@
 
   gtag('config', 'G-QWJ9SG5DZY');
 </script>
-  <script type="module" crossorigin src="/assets/index-DjFLhvad.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-D58nGUo7.css">
+  <script type="module" crossorigin src="/assets/index-KS0QZLt3.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cpwlxkye.css">
 </head>
 <body>
   <header>
@@ -53,8 +53,8 @@
           <span aria-hidden="true">
             Olga Borodchak
             <br>
-            <span class="banner-headline-muted">Full-</span>
-            <span class="accent-text">Stack</span>
+            <span class="banner-headline-muted">Front-</span>
+            <span class="accent-text">End</span>
             Developer
           </span> 
           <span class="sr-only"> Olga Borodchak Full-Stack Developer</span>
@@ -65,8 +65,8 @@
           to working backends. Independent, detail-driven, and always focused on what ships.
         </p>
         <div class="banner-cta">
-          <a href="#about" class="btn btn-primary">About me</a>
-          <a href="#work" class="btn btn-ghost">View work</a>
+          <a href="#about" class="btn btn-ghost">About me</a>
+          <a href="#work" class="btn btn-primary">View work</a>
         </div>
       </div>
     </section>
@@ -103,12 +103,12 @@
             </a>
             <div class="about-stats">
               <div class="about-stat">
-                <p class="about-stat-value">2022</p>
-                <p class="about-stat-label">Started coding</p>
+                <p class="about-stat-value">Frontend</p>
+                <p class="about-stat-label">Developer</p>
               </div>
               <div class="about-stat">
-                <p class="about-stat-value">Full-Stack</p>
-                <p class="about-stat-label">Developer</p>
+                <p class="about-stat-value">4+</p>
+                <p class="about-stat-label">Years in web development</p>
               </div>
               <div class="about-stat">
                 <p class="about-stat-value">Toronto</p>
@@ -135,8 +135,8 @@
           <div class="skills-category">
             <h3 class="skills-category-title">Frontend</h3>
             <ul class="skills-tags">
-              <li class="skills-tag skills-tag-featured">HTML5</li>
-              <li class="skills-tag skills-tag-featured">CSS3</li>
+              <li class="skills-tag skills-tag-featured">HTML</li>
+              <li class="skills-tag skills-tag-featured">CSS</li>
               <li class="skills-tag skills-tag-featured">JavaScript</li>
               <li class="skills-tag">React</li>
               <li class="skills-tag">GSAP</li>
@@ -305,7 +305,7 @@
           </h2>
           <p class="contact-lead">
             Have a project in mind, or just want to say hi? I'd love to hear from
-            you — I usually respond within a day or two.
+            you!
           </p>
           <div class="contact-info-list">
             <div class="contact-info-item">
@@ -325,17 +325,17 @@
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/xnqkygjk" method="POST" novalidate="">
           <div class="contact-field">
             <label class="contact-label" for="name">Name</label>
-            <input class="contact-input contact-input-caret" type="text" id="name" name="name" autocomplete="name" required="" aria-describedby="name-error">
+            <input class="contact-input custom-input-caret" type="text" id="name" name="name" autocomplete="name" required="" aria-describedby="name-error">
             <span class="contact-error" id="name-error" role="alert">Please enter your name.</span>
           </div>
           <div class="contact-field">
             <label class="contact-label" for="email">Email</label>
-            <input class="contact-input contact-input-caret" type="email" id="email" name="email" autocomplete="email" required="" aria-describedby="email-error">
+            <input class="contact-input custom-input-caret" type="email" id="email" name="email" autocomplete="email" required="" aria-describedby="email-error">
             <span class="contact-error" id="email-error" role="alert">Please enter your email.</span>
           </div>
           <div class="contact-field">
             <label class="contact-label" for="message">Message</label>
-            <textarea class="contact-textarea contact-input-caret" id="message" name="message" rows="5" required="" aria-describedby="message-error"></textarea>
+            <textarea class="contact-textarea custom-input-caret" id="message" name="message" rows="5" required="" aria-describedby="message-error"></textarea>
             <span class="contact-error" id="message-error" role="alert">Please enter a message.</span>
           </div>
           <div class="contact-honeypot" aria-hidden="true">
@@ -386,6 +386,29 @@
       <a class="footer-top" href="#banner">Back to top</a>
     </div>
   </footer>
-  
+  <div class="chat">
+    <button class="chat-toggle" id="chat-toggle" type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="Chat with Olga">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+      </svg>
+      <span class="chat-badge" id="chat-badge" hidden></span>
+    </button>
+    <section class="chat-panel" id="chat-panel" aria-labelledby="chat-heading" hidden>
+      <header class="chat-header">
+        <span class="chat-avatar" aria-hidden="true"></span>
+        <div class="chat-title">
+          <strong id="chat-heading">Let's talk!</strong>
+          <span>Have a project or opportunity in mind?</span>
+        </div>
+        <button class="chat-close" id="chat-close" type="button" aria-label="Close chat">×</button>
+      </header>
+      <ol class="chat-messages" id="chat-messages" role="log" aria-label="Chat conversation" aria-relevant="additions"></ol>
+      <form class="chat-form" id="chat-form">
+        <label class="sr-only" for="chat-input">Message</label>
+        <input class="custom-input-caret" id="chat-input" name="message" type="text" maxlength="500" autocomplete="off" placeholder="Type a message…" required />
+        <button type="submit" class="chat-send">Send</button>
+      </form>
+    </section>
+  </div>
 </body>
 </html>
