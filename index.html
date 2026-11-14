@@ -18,14 +18,15 @@
 
   gtag('config', 'G-QWJ9SG5DZY');
 </script>
-  <script type="module" crossorigin src="/assets/index-KS0QZLt3.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Cpwlxkye.css">
+  <script type="module" crossorigin src="/assets/index-DEYP19jn.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-L0G9etvv.css">
 </head>
 <body>
   <header>
     <nav class="nav container">
       <a href="/" class="nav-logo">
-        <img src="/assets/logo-white-un9jJRE0.png" alt="Olga Borodchak Full-Stack Developer Logo">
+        <img class="logo-for-dark" src="/assets/logo-white-un9jJRE0.png" alt="Olga Borodchak Front-End Developer Logo">
+        <img class="logo-for-light" src="/assets/logo-black-BeDsvYqO.png" alt="" aria-hidden="true">
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span class="bar bar-top"></span>
@@ -37,6 +38,13 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#work" class="nav-link">Work</a></li>
         <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+        <li>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light theme">
+            <span class="slider"></span>
+            <span class="sr-only">Light theme</span>
+          </label>
+        </li>
       </ul>
     </nav>
   </header>
@@ -114,7 +122,6 @@
                 <p class="about-stat-label">Canada</p>
               </div>
             </div>
-            
           </div>  
         </div>
       </div>
@@ -349,8 +356,9 @@
   </main>
   <footer class="footer">
     <div class="container footer-wrap">
-      <a href="#" aria-label="curlycoder.ca home">
-        <img src="data:image/png;base64,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" alt="Olga Borodchak Full-Stack Developer Logo">
+      <a href="/" aria-label="curlycoder.ca home">
+        <img class="footer-logo-dark" src="data:image/png;base64,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" alt="Olga Borodchak Full-Stack Developer Logo">
+        <img class="footer-logo-light" src="data:image/png;base64,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" alt="" aria-hidden="true">
       </a>
       <div class="footer-meta">
         <p >&copy; 2026 Olga Borodchak. All rights reserved.</p>
