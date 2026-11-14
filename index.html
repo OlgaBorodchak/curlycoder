@@ -24,7 +24,8 @@
   <header>
     <nav class="nav container">
       <a href="/" class="nav-logo">
-        <img src="./src/assets/images/logo-white.png" alt="Olga Borodchak Full-Stack Developer Logo">
+        <img class="logo-for-dark" src="./src/assets/images/logo-white.png" alt="Olga Borodchak Front-End Developer Logo">
+        <img class="logo-for-light" src="./src/assets/images/logo-black.png" alt="" aria-hidden="true">
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span class="bar bar-top"></span>
@@ -36,6 +37,12 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#work" class="nav-link">Work</a></li>
         <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+        <li>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" role="switch" aria-label="Light theme">
+            <span class="slider"></span>
+          </label>
+        </li>
       </ul>
     </nav>
   </header>
@@ -348,8 +355,9 @@
   </main>
   <footer class="footer">
     <div class="container footer-wrap">
-      <a href="#" aria-label="curlycoder.ca home">
-        <img src="./src/assets/images/footer-logo-white.png" alt="Olga Borodchak Full-Stack Developer Logo">
+      <a href="/" aria-label="curlycoder.ca home">
+        <img class="footer-logo-dark" src="./src/assets/images/footer-logo-white.png" alt="Olga Borodchak Full-Stack Developer Logo">
+        <img class="footer-logo-light" src="./src/assets/images/footer-logo-black.png" alt="" aria-hidden="true">
       </a>
       <div class="footer-meta">
         <p >&copy; 2026 Olga Borodchak. All rights reserved.</p>

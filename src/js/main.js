@@ -7,6 +7,7 @@ import { bannerGlowAnimation } from './animations.js'
 import { headlineRevealAnimation } from './animations.js'
 import { headingsRevealAnimation } from './animations.js'
 import { initChat } from './chat.js'
+import { switchTheme} from './switch.js'
 
 initNavbar()
 initContactForm()
@@ -15,3 +16,4 @@ bannerGlowAnimation()
 headlineRevealAnimation()
 headingsRevealAnimation()
 initChat()
+switchTheme()

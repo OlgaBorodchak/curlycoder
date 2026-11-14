@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --color-bg: #363636; /* page background */
   --color-bg-raised: #474747; /* cards, dividers */
 
@@ -53,4 +54,24 @@
   --navbar-height: 5.313em;
   --border-radius-sm: 2px;
   --border-radius-md: 4px;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --color-bg: #ffffff;
+
+  --color-text-primary: #363636;
+  --color-text-muted: #4D4D4D;
+  --color-text-disabled: #77756E;
+
+  --color-accent: #BE134C;
+  --color-accent-soft: #c40f4a;
+
+  --color-btn-primary-bg: #e8175d;
+  --color-btn-primary-text: #050505;
+  --color-btn-ghost-text: #666666;
+  --color-btn-ghost-border: #c9c3b7;
+
+  --color-border: #c9c3b7;
 }

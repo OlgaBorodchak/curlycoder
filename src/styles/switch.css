@@ -1,0 +1,88 @@
+.logo-for-light {
+  display: none;
+}
+
+:root[data-theme='light'] .logo-for-dark {
+  display: none;
+}
+
+:root[data-theme='light'] .logo-for-light {
+  display: block;
+}
+
+.footer-logo-light {
+  display: none;
+}
+
+:root[data-theme='light'] .footer-logo-dark {
+  display: none;
+}
+
+:root[data-theme='light'] .footer-logo-light {
+  display: block;
+}
+
+/* From Uiverse.io by alexruix */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #363636;
+  border: 1px solid #4a4a4a;
+  border-radius: 30px;
+  transition: background-color 0.5s;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  height: 1.4em;
+  width: 1.4em;
+  left: 10%;
+  bottom: 15%;
+  border-radius: 50%;
+  background: #363636;
+  box-shadow: inset 8px -4px 0 0 #f0ede8;
+  transition:
+    transform 0.5s,
+    box-shadow 0.5s,
+    background-color 0.5s;
+}
+
+input:checked + .slider {
+  background-color: var(--color-bg);
+  border-color: var(--color-border);
+}
+
+input:checked + .slider::before {
+  background-color: var(--color-bg);
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0 15px var(--color-accent);
+}
+
+input:focus-visible + .slider {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slider,
+  .slider::before {
+    transition: none;
+  }
+}
