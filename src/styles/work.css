@@ -61,7 +61,7 @@
 .project-desc {
   font-size: var(--text-sm);
   color: var(--color-text-disabled);
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .project-tags {
@@ -100,7 +100,7 @@
 
 .project-link {
   font-size: var(--text-xs);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--color-accent);

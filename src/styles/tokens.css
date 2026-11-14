@@ -11,7 +11,7 @@
   --color-accent-soft: #d4607f; /* eyebrow, tags — lightened for a11y (4.5:1) */
 
   --color-btn-primary-bg: #e8175d;
-  --color-btn-primary-text: #1a1a1a; /* dark text on pink — 5.2:1 ✓ */
+  --color-btn-primary-text: #ffffff; /* dark text on pink — 5.2:1 ✓ */
   --color-btn-ghost-text: #a8a7a7;
   --color-btn-ghost-border: #474747;
 
@@ -68,8 +68,8 @@
   --color-accent: #BE134C;
   --color-accent-soft: #c40f4a;
 
-  --color-btn-primary-bg: #e8175d;
-  --color-btn-primary-text: #050505;
+  --color-btn-primary-bg: #E3165B;
+  --color-btn-primary-text: #ffffff;
   --color-btn-ghost-text: #666666;
   --color-btn-ghost-border: #c9c3b7;
 
